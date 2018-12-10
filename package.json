@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "expo": "31.0.6",
+    "expo-2d-context": "0.0.2",
     "expo-asset": "1.0.2",
     "expo-core": "1.2.0",
     "expo-font-interface": "1.1.0",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
+    "babel-polyfill": "6.26.0",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.50.0"
   },

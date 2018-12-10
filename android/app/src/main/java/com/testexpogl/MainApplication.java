@@ -13,6 +13,7 @@ import expo.adapters.react.ReactAdapterPackage;
 import expo.adapters.react.ReactModuleRegistryProvider;
 import expo.core.ModuleRegistryProvider;
 import expo.core.interfaces.Package;
+import expo.modules.filesystem.FileSystemPackage;
 import expo.modules.gl.GLPackage;
 
 import java.util.Arrays;
@@ -53,7 +54,8 @@ public class MainApplication extends Application implements ReactApplication {
 
 	private final ModuleRegistryProvider mModuleRegistryProvider = new ReactModuleRegistryProvider(Arrays.<Package>asList(
 			new ReactAdapterPackage(),
-      new GLPackage()
+      new GLPackage(),
+      new FileSystemPackage()
 		)
 	);
 }
