@@ -18,8 +18,17 @@ const instructions = Platform.select({
 
 type Props = {}
 export default class App extends Component<Props> {
-  onContextCreate = gl => {
+  onContextCreate = async gl => {
     var ctx = new Expo2DContext(gl)
+    try {
+      await ctx.initializeText()
+      ctx.fillStyle = "blue"
+      ctx.font = "italic 72pt sans-serif"
+      ctx.fillText("Hey Galaxy", 10, 100)
+      ctx.flush()
+    } catch (err) {
+      console.error(err)
+    }
     ctx.translate(50, 200)
     ctx.scale(4, 4)
     ctx.fillStyle = "grey"
